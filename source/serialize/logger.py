@@ -14,7 +14,7 @@ def init():
     consoleHandler.setFormatter(infoFormat)
 
     # Create the FileHandler
-    infoFileHandler = logging.FileHandler("./jenkins.log")
+    infoFileHandler = logging.FileHandler("/var/log/jenkins.log")
     infoFileHandler.setLevel(logging.INFO)
     infoFileHandler.setFormatter(infoFormat)
     

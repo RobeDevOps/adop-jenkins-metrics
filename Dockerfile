@@ -16,7 +16,7 @@ ENV APPLICATION_HOME /opt/jenkins_collector
 ENV PERIOD 30s
 COPY ./filebeat/filebeat.yml ${FILEBEAT_HOME}/filebeat.yml
 ADD ./source ${APPLICATION_HOME}
-RUN pip3 install -r ${APPLICATION_HOME}/requirements.txt && \
+RUN pip3 install -r ${APPLICATION_HOME}/requirements.txt
 ADD entrypoint.sh /entrypoint.sh
 RUN chown filebeat:filebeat ${FILEBEAT_HOME}/filebeat.yml && \
     chown -R filebeat:filebeat ${APPLICATION_HOME} && \

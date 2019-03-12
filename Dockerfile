@@ -5,9 +5,9 @@ LABEL MAINTAINER="roberto cardenas <rcardenas20@gmail.com>"
 USER root
 RUN yum --enablerepo=extras install epel-release -y && \
     yum update -y && \
-    yum install python-pip -y && \
+    yum install python34 python34-pip -y && \
     pip install --upgrade pip && \
-    pip install -r requirements && \
+    pip install -r requirements.txt && \
     yum clean all && \
     rm -rf /var/cache/yum
 

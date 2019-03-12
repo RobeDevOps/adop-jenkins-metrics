@@ -6,8 +6,8 @@ USER root
 RUN yum --enablerepo=extras install epel-release -y && \
     yum update -y && \
     yum install python34 python34-pip -y && \
-    pip install --upgrade pip && \
-    pip install -r requirements.txt && \
+    pip3 install --upgrade pip && \
+    pip3 install -r requirements.txt && \
     yum clean all && \
     rm -rf /var/cache/yum
 

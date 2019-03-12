@@ -4,7 +4,6 @@ import logging
 import os
 import sys
 
-
 logger = logging.getLogger('jenkins')
 
 # return a jenkins instance 

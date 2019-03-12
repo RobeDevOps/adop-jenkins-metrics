@@ -8,6 +8,7 @@ RUN yum install -y https://centos7.iuscommunity.org/ius-release.rpm -y && \
     yum install -y python36u python36u-libs python36u-devel python36u-pip -y && \
     easy_install-3.6 pip && \
     pip install --upgrade pip && \
+    pip install virtualenv && \
     yum clean all && \
     rm -rf /var/cache/yum
 

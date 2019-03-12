@@ -3,10 +3,11 @@ FROM docker.elastic.co/beats/filebeat:6.4.3
 LABEL MAINTAINER="roberto cardenas <rcardenas20@gmail.com>"
 
 USER root
-RUN yum --enablerepo=extras install epel-release -y && \
+RUN yum install -y https://centos7.iuscommunity.org/ius-release.rpm -y && \
     yum update -y && \
-    yum install python34 python34-pip -y && \
-    pip3 install --upgrade pip && \
+    yum yum install -y python36u python36u-libs python36u-devel python36u-pip -y && \
+    easy_install-3.6 pip && \
+    pip install --upgrade pip && \
     yum clean all && \
     rm -rf /var/cache/yum
 

@@ -7,7 +7,7 @@ RUN yum --enablerepo=extras install epel-release -y && \
     yum update -y && \
     yum install python-pip -y && \
     pip install --upgrade pip && \
-    pip install requests && \
+    pip install -r requirements && \
     yum clean all && \
     rm -rf /var/cache/yum
 

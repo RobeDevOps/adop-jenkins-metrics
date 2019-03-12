@@ -5,7 +5,7 @@ LABEL MAINTAINER="roberto cardenas <rcardenas20@gmail.com>"
 USER root
 RUN yum install -y https://centos7.iuscommunity.org/ius-release.rpm -y && \
     yum update -y && \
-    yum yum install -y python36u python36u-libs python36u-devel python36u-pip -y && \
+    yum install -y python36u python36u-libs python36u-devel python36u-pip -y && \
     easy_install-3.6 pip && \
     pip install --upgrade pip && \
     yum clean all && \

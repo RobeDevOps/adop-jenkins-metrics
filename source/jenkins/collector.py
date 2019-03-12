@@ -56,7 +56,6 @@ def getJobDetails(server):
             continue
         else:
             job_collector.add( job_full_name )
-            print ("x"*100)
             logger.info("", extra={
                 'job_name': job_full_name, 
                 'last_buildnumber': getLastBuildNumber(job_instance),

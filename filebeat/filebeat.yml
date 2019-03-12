@@ -1,0 +1,10 @@
+---
+filebeat.inputs:
+- type: log 
+  tags: ['jenkins'] # it can be customized by parameters
+  paths:
+    - "/var/log/jenkins.log"
+
+#----------------------------- Logstash output --------------------------------
+output.logstash:
+hosts: ["${LOGSTASH_HOST}"]

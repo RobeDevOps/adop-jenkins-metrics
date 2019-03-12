@@ -8,7 +8,7 @@ if [ "$1" = 'start' ]; then
 
     cd ${APPLICATION_HOME}
     virtualenv libs
-    source ./libs/Scripts/activate
+    source ./libs/bin/activate
     pip install -r requirements.txt
     
     while true; do

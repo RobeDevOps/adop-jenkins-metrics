@@ -20,8 +20,9 @@ ADD ./source ${APPLICATION_HOME}
 RUN pip3 install -r ${APPLICATION_HOME}/requirements.txt
 ADD entrypoint.sh /entrypoint.sh
 RUN chown filebeat:filebeat ${FILEBEAT_HOME}/filebeat.yml && \
-    chown -R filebeat:filebeat ${APPLICATION_HOME} && \
+    chown -R filebeat:filebeat ${APPLICATION_HOME} && \ 
     chown filebeat:filebeat /entrypoint.sh && \
+    chown filebeat:filebeat -R /var/log && \
     chmod go-w /usr/share/filebeat/filebeat.yml && \
     chmod +x /entrypoint.sh
 USER filebeat

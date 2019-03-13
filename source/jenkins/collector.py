@@ -15,9 +15,9 @@ def getServerInstance(jenkins_url, jenkins_usr, jenkins_psw):
         server = Jenkins(jenkins_url, username=jenkins_usr, password=jenkins_psw)
         return server
     except:
+        # TODO using logger with filter for error messages
         print("Server unavailable or credentials errors")
-        sys.exit(128)
-
+        return None
 
 # Last build number can be Success or Failure
 def getLastBuildNumber(job_instance):
